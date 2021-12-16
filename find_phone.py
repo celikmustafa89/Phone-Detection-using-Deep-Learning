@@ -45,7 +45,7 @@ def find_phone(path):
     print("\n\nPhone in image {0} is located at x-y coordinates given below."
           .format(str(file_name)))
     print("\n{:.4f} {:.4f}".format(result[0][0], result[0][1]))
-    image = cv2.circle(resized_image, (result[0][0], result[0][1]), radius=0, color=(0, 0, 255), thickness=-1)
+    image = cv2.circle(resized_image, (result[0][0]*64, result[0][1]*64), radius=0, color=(0, 0, 255), thickness=-1)
     cv2.imwrite("result.png",image)
 
 def main():
