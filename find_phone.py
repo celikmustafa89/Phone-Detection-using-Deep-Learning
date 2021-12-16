@@ -15,7 +15,7 @@ def find_phone(path):
     """ This function is used to predict coordinates using the trained model. """
     # Getting file name and path from the input.
     
-    print("path:",paht)
+    print("path:",path)
     file_name = list(path.split(os.sep))[-1]
     path_list = list(path.split(os.sep))[:-1]
     new_path = ''
