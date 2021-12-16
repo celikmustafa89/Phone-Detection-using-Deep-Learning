@@ -18,10 +18,12 @@ def find_phone(path):
     print("path:",path)
     file_name = list(path.split(os.sep))[-1]
     path_list = list(path.split(os.sep))[:-1]
+    print("filename,path_list",file_name,path_list)
     new_path = ''
     for i, element in enumerate(path_list):
+        print("element", element)
         if i < len(path_list) - 1:
-            new_path = new_path + element + '\\'
+            new_path = new_path + element + os.sep
         else:
             new_path = new_path + element
 
