@@ -14,8 +14,10 @@ from keras.models import load_model
 def find_phone(path):
     """ This function is used to predict coordinates using the trained model. """
     # Getting file name and path from the input.
-    file_name = list(path.split('\\'))[-1]
-    path_list = list(path.split('\\'))[:-1]
+    
+    print("path:",paht)
+    file_name = list(path.split(os.sep))[-1]
+    path_list = list(path.split(os.sep))[:-1]
     new_path = ''
     for i, element in enumerate(path_list):
         if i < len(path_list) - 1:
@@ -23,6 +25,7 @@ def find_phone(path):
         else:
             new_path = new_path + element
 
+    print("new_path: ",new_path)
     # Setting the path to folder containing weights.
     os.chdir(new_path)
 
