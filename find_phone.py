@@ -45,6 +45,7 @@ def find_phone(path):
     print("\n\nPhone in image {0} is located at x-y coordinates given below."
           .format(str(file_name)))
     print("\n{:.4f} {:.4f}".format(result[0][0], result[0][1]))
+    print(result)
 
 def main():
     """ This function is used to run the program. """
