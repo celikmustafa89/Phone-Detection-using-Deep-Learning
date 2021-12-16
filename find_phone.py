@@ -47,6 +47,8 @@ def find_phone(path):
     print("\n{:.4f} {:.4f}".format(result[0][0], result[0][1]))
     image = cv2.circle(resized_image, (int(result[0][0]*64), int(result[0][1]*64)), radius=0, color=(0, 0, 255), thickness=-1)
     cv2.imwrite("result.png",image)
+    image_org = cv2.circle(img, (int(result[0][0]*img.shape[0]), int(result[0][1]*img.shape[0])), radius=0, color=(0, 0, 255), thickness=-1)
+    cv2.imwrite("result_org.png",image_org)
 
 def main():
     """ This function is used to run the program. """
